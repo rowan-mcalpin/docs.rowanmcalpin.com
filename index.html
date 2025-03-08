@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    const oldDomain = "docs.rowanmcalpin.com";
+    const newDomain = "nextftc.dev";
+    if (window.location.hostname === oldDomain) {
+      const newUrl = `https://${newDomain}${window.location.pathname}${window.location.search}`;
+      window.location.replace(newUrl);
+    }
+  </script>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <h1>Redirecting to nextftc.dev...</h1>
+</body>
+</html>
