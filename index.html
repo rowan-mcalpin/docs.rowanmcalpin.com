@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
   <script>
     const oldDomain = "docs.rowanmcalpin.com";
     const newDomain = "nextftc.dev";
-    if (window.location.hostname === oldDomain) {
-      const newUrl = `https://${newDomain}${window.location.pathname}${window.location.search}`;
-      window.location.replace(newUrl);
-    }
+
+    // Rebuild the full URL and redirect
+    const newUrl = `https://${newDomain}${window.location.pathname}${window.location.search}${window.location.hash}`;
+    window.location.replace(newUrl);
   </script>
-  <title>Redirecting...</title>
 </head>
 <body>
-  <h1>Redirecting to nextftc.dev...</h1>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected, <a id="redirect-link" href="#">click here</a>.</p>
+
+  <script>
+    // Update the link in case JavaScript is blocked
+    document.getElementById("redirect-link").href = newUrl;
+  </script>
 </body>
 </html>
